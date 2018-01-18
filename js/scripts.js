@@ -1,12 +1,13 @@
 var isPalindrome = function(word) {
-var wordArray = word.split(""); // turn string in array
-reversedArray = wordArray.reverse(); // make new array with reverse
-reversedString = reversedArray.join(""); // make string of reversed array
-if (word === reversedString){ // compare the two strings
-  return true // return true or false
-} else {
-  return false
-}
+  var lowerCaseWord = word.toLowerCase();
+  var wordArray = lowerCaseWord.split(""); // turn string in array
+  reversedArray = wordArray.reverse(); // make new array with reverse
+  reversedString = reversedArray.join(""); // make string of reversed array
+  if (word.toLowerCase() === reversedString){ // compare the two strings
+    return true // return true or false
+  } else {
+    return false
+  }
 }
 
 $(document).ready(function(){
